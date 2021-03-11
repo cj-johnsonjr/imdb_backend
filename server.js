@@ -14,8 +14,6 @@ app.use("/users", userRoutes);
 app.use("/favorites", favoriteRoutes);
 app.use("/reviews", reviewRoutes);
 
-app.get("/", (req, res) => res.send("Is this thing working?"));
-
 app.get("*", (req, res) => {
   res.sendFile("/build/index.html", { root: _dirname + "/" });
 });
